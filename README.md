@@ -10,7 +10,7 @@
 
 </p>
 
-<h4 align="center"> Hi, I'm Leandro and here is a Fast Food Landing Page <br> Made with React and Tailwind CSS ( practicing this powerful CSS tool )<br> You can filter the results by Price and Category  <br> Thanks for stopping by, I hope you enjoy it.</h4>
+<h4 align="center"> Hi, I'm Leandro and here is my Fast Food Landing Page <br> Made with React and Tailwind CSS ( practicing this powerful CSS tool )<br> You can filter the results by Price and Category  <br> Thanks for stopping by, I hope you enjoy it.</h4>
 
 <br>
 
