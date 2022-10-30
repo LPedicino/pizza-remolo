@@ -26,8 +26,8 @@ const Food = () => {
 
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12">
-      <h1 className="text-[#F23827] font-bold text-4xl text-center">
-        Top Rated Menu
+      <h1 className="text-[#F23827] font-bold text-4xl text-center mb-10">
+        Menu
       </h1>
       {/* Filted Row */}
       <div className="flex flex-col lg:flex-row justify-between">
