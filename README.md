@@ -1,21 +1,21 @@
-<h1 align="center">  Fast Food Mockup </h1>
+<h1 align="center">  Pizzeria Remolo </h1>
 
-<h2 align="center"> Welcome to my Fast Food Mockup <h2>
+<h2 align="center"> Welcome to Pizza Remolo Restaurant<h2>
 
 <br>
 
 <p align="center">
 
-<img width="500" alt="fastfood" src="https://user-images.githubusercontent.com/50922820/196754020-91a461a8-cced-489f-b0e4-78ae79a2cb97.png">
+<img width="500" alt="pizzeria" src="https://user-images.githubusercontent.com/50922820/198873717-af0f60d4-bb9c-49dd-87b4-59f84bd31639.png">
 
 </p>
 
-<h4 align="center"> Hi, I'm Leandro and here is my Fast Food Mockup <br> Made with React and Tailwind CSS ( practicing this powerful CSS tool )<br> You can filter the results by Price and Category  <br> Thanks for stopping by, I hope you enjoy it.</h4>
+<h4 align="center"> Hi, I'm Leandro and here is the Pizzeria Web that I made in colaboration with an IDforIdeas Team. <br> Made with React and styled with TailwindCSS.
 
 <br>
 
 <span align="center">
 
-##### :point_right: You can see it deployed at [Fast Food](https://lpedicino.github.io/fastfood-lp/)
+##### :point_right: You can see it deployed at [Pizzeria](https://lpedicino.github.io/pizza-remolo)
 
 </span>
