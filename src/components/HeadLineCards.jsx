@@ -31,7 +31,7 @@ const HeadLineCards = () => {
         </div>
         <img
           className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl"
-          src="https://images.pexels.com/photos/827528/pexels-photo-827528.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src="https://media.istockphoto.com/vectors/cartoon-pizzeria-vector-flat-illustration-vector-id519962818?k=20&m=519962818&s=612x612&w=0&h=WJdUTmWzzgQm6C-PUw6KxFfYq_qXVkYaiduqbIZLn6o="
           alt="/"
         />
       </div>

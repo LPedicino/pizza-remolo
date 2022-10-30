@@ -1,15 +1,10 @@
 import React, { useState } from "react";
-import {
-  AiFillTag,
-  AiOutlineClose,
-  AiOutlineMenu,
-  AiOutlineSearch,
-  AiOutlineWhatsApp,
-} from "react-icons/ai";
+import { AiFillTag, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
 import { MdFavorite, MdHelp } from "react-icons/md";
+import logo from "./logo.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -24,33 +19,23 @@ const Navbar = () => {
         <h1 className="text-2xl sm:text-3xl lg:-text-4xl px-2">
           Pizzeria <span className="font-bold text-[#F23827]">Remolo</span>
         </h1>
-        <div className="hidden lg:flex items-center bg-black rounded-full p-1 text-[14px] hover:cursor-pointer ml-11">
+      </div>
+
+      {/* Search Input */}
+
+      <div className="hidden md:flex w-[100px] h-[80px] mt-0">
+        <img className="h-[100px] mt-0" src={logo} alt="logo" />
+      </div>
+
+      {/* Cart button */}
+
+      <a href="https://wa.me/0303456" target="blank_" className="">
+        <div className="flex items-center bg-black rounded-full p-1 text-[10px] md:text-[14px]  hover:cursor-pointer ml-11">
           <p className="bg-[#25d366] text-black rounded-full font-bold p-2">
             Delivery
           </p>
           <p className="p-2 text-white font-bold">Pick-up</p>
         </div>
-      </div>
-
-      {/* Search Input */}
-
-      <div className="bg-gray-200 rounded-full hidden md:flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
-        <AiOutlineSearch size={25} />
-        <input
-          className="bg-transparent p-2 focus:outline-none w-full"
-          type="text"
-          placeholder="Search foods"
-        />
-      </div>
-
-      {/* Cart button */}
-
-      <a
-        href="https://wa.me/0303456"
-        target="blank_"
-        className="bg-[#25d366] w-[100px] text-center text-black flex items-center py-1 px-2 rounded-xl border border-black hover:scale-105 duration-300"
-      >
-        <AiOutlineWhatsApp size={20} className="mr-2" /> Order
       </a>
 
       {/* Mobile Menu */}
