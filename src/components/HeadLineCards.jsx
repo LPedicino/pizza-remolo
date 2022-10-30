@@ -7,15 +7,15 @@ const HeadLineCards = () => {
       <div className="rounded-xl relative">
         {/* Overlay */}
         <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
-          <p className="font-bold text-2xl px-2 pt-4">Sun's Out, BOGO's Out</p>
-          <p className="px-2">Through 8/26</p>
+          <p className="font-bold text-2xl px-2 pt-4">Delivery all town</p>
+          <p className="px-2">from 12:00 at 00:00</p>
           <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4">
             Order Now
           </button>
         </div>
         <img
           className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl"
-          src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=300"
+          src="https://static.vecteezy.com/system/resources/previews/002/861/702/original/cute-pizza-delivery-man-hold-pizza-box-cartoon-illustration-kawaii-cartoon-character-vector.jpg"
           alt="/"
         />
       </div>

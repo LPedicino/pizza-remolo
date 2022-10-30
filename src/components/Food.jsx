@@ -26,7 +26,7 @@ const Food = () => {
 
   return (
     <div className="max-w-[1640px] m-auto px-4 py-12">
-      <h1 className="text-orange-600 font-bold text-4xl text-center">
+      <h1 className="text-[#F23827] font-bold text-4xl text-center">
         Top Rated Menu
       </h1>
       {/* Filted Row */}
@@ -37,33 +37,28 @@ const Food = () => {
           <div className="flex justify-between flex-wrap">
             <button
               onClick={() => setFoods(data)}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
               All
             </button>
-            <button
-              onClick={() => filterType("burger")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
-            >
-              Burgers
-            </button>
+
             <button
               onClick={() => filterType("pizza")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
               Pizzas
             </button>
             <button
               onClick={() => filterType("salad")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
               Salads
             </button>
             <button
-              onClick={() => filterType("chicken")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              onClick={() => filterType("desserts")}
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
-              Chicken
+              Desserts
             </button>
           </div>
         </div>
@@ -73,25 +68,25 @@ const Food = () => {
           <div className="flex justify-between max-w-[390px] w-full ">
             <button
               onClick={() => filterPrice("$")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
               $
             </button>
             <button
               onClick={() => filterPrice("$$")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
               $$
             </button>
             <button
               onClick={() => filterPrice("$$$")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
               $$$
             </button>
             <button
               onClick={() => filterPrice("$$$$")}
-              className="m-1 border-orange-600 border-[1px] text-orange-600 hover:bg-orange-600 hover:text-white"
+              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
               $$$$
             </button>
@@ -113,7 +108,7 @@ const Food = () => {
             <div className="flex justify-between px-2 py-4">
               <p className="font-bold ">{item.name}</p>
               <p>
-                <span className="bg-orange-500 text-white p-1 rounded-full">
+                <span className="bg-[#F23827] text-white p-1 rounded-full">
                   {item.price}
                 </span>
               </p>

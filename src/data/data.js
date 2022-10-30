@@ -1,34 +1,34 @@
 export const data = [
   {
     id: 1,
-    name: "Double Cheeseburger",
-    category: "burger",
+    name: "Salami Pizza",
+    category: "pizza",
     image:
-      "https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60",
+      "https://images.pexels.com/photos/4109083/pexels-photo-4109083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "$$$$",
   },
   {
     id: 2,
-    name: "Bacon Cheeseburger",
-    category: "burger",
+    name: "Mushroom",
+    category: "pizza",
     image:
-      "https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+      "https://bakerbynature.com/wp-content/uploads/2015/10/IMG_8442-31-500x375.jpg",
     price: "$",
   },
   {
     id: 3,
-    name: "Mushroom Burger",
-    category: "burger",
+    name: "Corn Pizza",
+    category: "pizza",
     image:
-      "https://images.unsplash.com/photo-1608767221051-2b9d18f35a2f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60",
+      "https://images.pexels.com/photos/367915/pexels-photo-367915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "$$",
   },
   {
     id: 4,
-    name: "Loaded Burger",
+    name: "Mexican",
     category: "burger",
     image:
-      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60",
+      "https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "$$$",
   },
   {
@@ -97,34 +97,34 @@ export const data = [
   },
   {
     id: 13,
-    name: "Wings",
-    category: "chicken",
+    name: "Berry cheesecake",
+    category: "desserts",
     image:
-      "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      "https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "$$",
   },
   {
     id: 14,
-    name: "Baked Chicken",
-    category: "chicken",
+    name: "Brownie",
+    category: "desserts",
     image:
-      "https://images.unsplash.com/photo-1594221708779-94832f4320d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      "https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "$$$$",
   },
   {
     id: 15,
-    name: "Chicken Tenders",
-    category: "chicken",
+    name: "Ice Cream",
+    category: "desserts",
     image:
-      "https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://images.pexels.com/photos/2586924/pexels-photo-2586924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "$",
   },
   {
     id: 16,
-    name: "Chicken Kabob",
-    category: "chicken",
+    name: "Chocolate cake",
+    category: "desserts",
     image:
-      "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
+      "https://images.pexels.com/photos/4110008/pexels-photo-4110008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "$$$",
   },
 ];
@@ -150,9 +150,8 @@ export const categories = [
   },
   {
     id: 4,
-    name: "Indian",
-    image:
-      "https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Indian_BrowseHome@3x.png",
+    name: "Desserts",
+    image: "https://freesvg.org/img/icecream-2221064.png",
   },
   {
     id: 5,

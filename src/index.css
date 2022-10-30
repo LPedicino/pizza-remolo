@@ -8,3 +8,7 @@
     @apply border-black rounded-xl px-5 py-1
   }
 }
+
+body { 
+  background-color: #F2F1DF;
+}
