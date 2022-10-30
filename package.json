@@ -1,7 +1,7 @@
 {
   "name": "food-app",
   "version": "0.1.0",
-  "homepage": "https://lpedicino.github.io/fastfood-lp",
+  "homepage": "https://lpedicino.github.io/pizza-remolo",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
