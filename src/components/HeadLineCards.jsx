@@ -9,7 +9,7 @@ const HeadLineCards = () => {
         <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
           <p className="font-bold text-2xl px-2 pt-4">Delivery all town</p>
           <p className="px-2">from 12:00 at 00:00</p>
-          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4">
+          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white">
             Order Now
           </button>
         </div>
@@ -25,7 +25,7 @@ const HeadLineCards = () => {
         <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
           <p className="font-bold text-2xl px-2 pt-4">New Restaurants</p>
           <p className="px-2">Franchises available</p>
-          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4">
+          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white">
             Contact US
           </button>
         </div>
@@ -39,11 +39,9 @@ const HeadLineCards = () => {
       <div className="rounded-xl relative">
         {/* Overlay */}
         <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
-          <p className="font-bold text-2xl px-2 pt-4">
-            We Deliver Desserts Too
-          </p>
+          <p className="font-bold text-2xl px-2 pt-4">We Have Desserts Too</p>
           <p className="px-2">Tasty Treats</p>
-          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4">
+          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white">
             Order Now
           </button>
         </div>

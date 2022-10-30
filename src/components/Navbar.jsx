@@ -14,25 +14,27 @@ import { MdFavorite, MdHelp } from "react-icons/md";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   return (
-    <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
+    <div className="max-w-[1640px] mx-auto flex justify-between items-center  p-4">
       {/* Left side */}
 
-      <div className="flex items-center">
+      <div className="flex items-center ">
         <div onClick={() => setNav(!nav)} className="cursor-pointer">
           <AiOutlineMenu size={30} />
         </div>
         <h1 className="text-2xl sm:text-3xl lg:-text-4xl px-2">
           Pizzeria <span className="font-bold text-[#F23827]">Remolo</span>
         </h1>
-        <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]">
-          <p className="bg-black text-white rounded-full p-2">Delivery</p>
-          <p className="p-2 ">Pick-up</p>
+        <div className="hidden lg:flex items-center bg-black rounded-full p-1 text-[14px] hover:cursor-pointer ml-11">
+          <p className="bg-[#25d366] text-black rounded-full font-bold p-2">
+            Delivery
+          </p>
+          <p className="p-2 text-white font-bold">Pick-up</p>
         </div>
       </div>
 
       {/* Search Input */}
 
-      <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
+      <div className="bg-gray-200 rounded-full hidden md:flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
         <AiOutlineSearch size={25} />
         <input
           className="bg-transparent p-2 focus:outline-none w-full"
@@ -46,7 +48,7 @@ const Navbar = () => {
       <a
         href="https://wa.me/0303456"
         target="blank_"
-        className="bg-[#25d366] w-[100px] text-center text-black hidden md:flex items-center py-1 px-2 rounded-xl"
+        className="bg-[#25d366] w-[100px] text-center text-black flex items-center py-1 px-2 rounded-xl border border-black hover:scale-105 duration-300"
       >
         <AiOutlineWhatsApp size={20} className="mr-2" /> Order
       </a>

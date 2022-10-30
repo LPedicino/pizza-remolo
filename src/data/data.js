@@ -65,34 +65,34 @@ export const data = [
   },
   {
     id: 9,
-    name: "Kale Salad",
-    category: "salad",
+    name: "Jamon & Cheese",
+    category: "special",
     image:
-      "https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      "https://www.cucinare.tv/wp-content/uploads/2020/01/Dise%C3%B1o-sin-t%C3%ADtulo-34.png",
     price: "$$",
   },
   {
     id: 10,
-    name: "Ceasar Salad",
-    category: "salad",
+    name: "Criolla",
+    category: "special",
     image:
-      "https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      "https://comidasparaguayas.com/wp-content/uploads/2019/11/empanada-de-carne-paraguaya_700x465.jpg",
     price: "$$$",
   },
   {
     id: 11,
-    name: "Loaded Salad",
-    category: "salad",
+    name: "Calzone J&C",
+    category: "special",
     image:
-      "https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60",
+      "https://nuevodiarioweb1.cdn.net.ar/252/nuevodiarioweb/images/01/17/66/1176661_107d1321d02cf22b2870d590be11a54e43ee0b9cfc2a69e890a07b83a1439008/sm.jpg",
     price: "$$$$",
   },
   {
     id: 12,
-    name: "Fruit Salad",
-    category: "salad",
+    name: "Calzone Calabres",
+    category: "special",
     image:
-      "https://images.unsplash.com/photo-1564093497595-593b96d80180?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+      "https://static.tvgazeta.com.br/uploads/2022/06/calzone-de-calabresa-pizza-recheada-receita-1024x683.png",
     price: "$",
   },
   {
@@ -144,9 +144,9 @@ export const categories = [
   },
   {
     id: 3,
-    name: "Wings",
+    name: "Calzone",
     image:
-      "https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Wings_BrowseHome@3x.png",
+      "https://www.clipartmax.com/png/middle/50-500044_calzone-calzone-clipart.png",
   },
   {
     id: 4,
@@ -155,9 +155,8 @@ export const categories = [
   },
   {
     id: 5,
-    name: "Latest Deals",
-    image:
-      "https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Deals_BrowseHome@3x.png",
+    name: "Great discounts",
+    image: "https://cdn-icons-png.flaticon.com/512/189/189715.png",
   },
   {
     id: 6,
@@ -173,8 +172,8 @@ export const categories = [
   },
   {
     id: 8,
-    name: "Shipped Free",
+    name: "Delivery",
     image:
-      "https://duyt4h9nfnj50.cloudfront.net/new_search_home_eats_icon/Placeholder_Plates@3x.png",
+      "https://cdni.iconscout.com/illustration/premium/thumb/food-delivery-bike-4808772-3992759.png",
   },
 ];

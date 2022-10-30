@@ -1,14 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@300&display=swap');
 
 @layer base {
   button {
     @apply border-black rounded-xl px-5 py-1
   }
 }
-
+* {
+  font-family: 'Trispace', sans-serif;
+}
 body { 
   background-color: #F2F1DF;
 }

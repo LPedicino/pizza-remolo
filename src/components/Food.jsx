@@ -33,7 +33,7 @@ const Food = () => {
       <div className="flex flex-col lg:flex-row justify-between">
         {/* filter type */}
         <div>
-          <p className="font-bold text-gray-700">Filter Type</p>
+          <p className="font-bold text-gray-700">Filter by Categorie</p>
           <div className="flex justify-between flex-wrap">
             <button
               onClick={() => setFoods(data)}
@@ -49,10 +49,10 @@ const Food = () => {
               Pizzas
             </button>
             <button
-              onClick={() => filterType("salad")}
+              onClick={() => filterType("special")}
               className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
             >
-              Salads
+              Specials
             </button>
             <button
               onClick={() => filterType("desserts")}
@@ -64,7 +64,7 @@ const Food = () => {
         </div>
         {/* filter price */}
         <div>
-          <p className="font-bold text-gray-700">Filter Price</p>
+          <p className="font-bold text-gray-700">Filter by Price</p>
           <div className="flex justify-between max-w-[390px] w-full ">
             <button
               onClick={() => filterPrice("$")}
@@ -93,12 +93,14 @@ const Food = () => {
           </div>
         </div>
       </div>
+
       {/* Display Foods */}
+
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
         {foods.map((item, index) => (
           <div
             key={index}
-            className="border shadow-lg rounded-lg hover:scale-105 duration-300"
+            className="border shadow-lg rounded-lg hover:scale-105 duration-300 hover:cursor-pointer"
           >
             <img
               src={item.image}
