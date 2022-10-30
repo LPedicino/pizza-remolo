@@ -46,7 +46,7 @@ const Navbar = () => {
       <a
         href="https://wa.me/0303456"
         target="blank_"
-        className="bg-[#F23827] w-[100px] text-center text-white hidden md:flex items-center py-1 px-2 rounded-xl"
+        className="bg-[#25d366] w-[100px] text-center text-black hidden md:flex items-center py-1 px-2 rounded-xl"
       >
         <AiOutlineWhatsApp size={20} className="mr-2" /> Order
       </a>

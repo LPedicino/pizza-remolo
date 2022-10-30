@@ -24,9 +24,9 @@ const HeadLineCards = () => {
         {/* Overlay */}
         <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
           <p className="font-bold text-2xl px-2 pt-4">New Restaurants</p>
-          <p className="px-2">Added Daily</p>
+          <p className="px-2">Franchises available</p>
           <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4">
-            Order Now
+            Contact US
           </button>
         </div>
         <img
