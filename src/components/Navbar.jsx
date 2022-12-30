@@ -9,7 +9,7 @@ import logo from "./logo.png";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   return (
-    <div className="max-w-[1640px] mx-auto flex justify-between items-center  p-4">
+    <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
       {/* Left side */}
 
       <div className="flex items-center ">
@@ -21,10 +21,11 @@ const Navbar = () => {
         </h1>
       </div>
 
-      {/* Search Input */}
+
+      {/*  Logo  */}
 
       <div className="hidden md:flex w-[100px] h-[80px] mt-0">
-        <img className="h-[100px] mt-0" src={logo} alt="logo" />
+        <img className="h-[100px] mt-0 " src={logo} alt="logo" />
       </div>
 
       {/* Cart button */}
