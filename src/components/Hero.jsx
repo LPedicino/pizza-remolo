@@ -1,29 +1,9 @@
 import React, { useState } from 'react';
 import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
+import { slides } from '../data/data';
 
 const Hero = () => {
-  const slides = [
-      {
-        url: 'https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1499778003268-cbafc6d08bab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1489564239502-7a532064e1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-      },
-      {
-        url: 'https://www.lavozdegalicia.es/default/2019/04/24/00121556124242683572901/Foto/GA17P23F1_184213.jpg',
-      },
-      {
-        url: 'https://s1.eestatic.com/2018/09/24/cocinillas/cocinillas_340480272_116593014_1600x938.jpg',
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1506095619733-3c3ea98fb968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-      },
-      
-    ]; 
-
+  
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const prevSlide = () => {

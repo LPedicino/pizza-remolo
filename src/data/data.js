@@ -177,3 +177,25 @@ export const categories = [
       "https://cdni.iconscout.com/illustration/premium/thumb/food-delivery-bike-4808772-3992759.png",
   },
 ];
+
+export const slides = [
+  {
+    url: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1564936281403-f92f66f89ee0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1630443876697-e0d2faac7b51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1609525313344-a56b96f20718?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1557&q=80',
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1506095619733-3c3ea98fb968?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+  },
+  
+]; 
