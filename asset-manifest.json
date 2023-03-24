@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pizza-remolo/static/css/main.090fb0ed.css",
-    "main.js": "/pizza-remolo/static/js/main.3341f080.js",
+    "main.css": "/pizza-remolo/static/css/main.ab8ebe84.css",
+    "main.js": "/pizza-remolo/static/js/main.0bbdfbd6.js",
     "static/media/logo.png": "/pizza-remolo/static/media/logo.1fac5b13685725393561.png",
     "index.html": "/pizza-remolo/index.html",
-    "main.090fb0ed.css.map": "/pizza-remolo/static/css/main.090fb0ed.css.map",
-    "main.3341f080.js.map": "/pizza-remolo/static/js/main.3341f080.js.map"
+    "main.ab8ebe84.css.map": "/pizza-remolo/static/css/main.ab8ebe84.css.map",
+    "main.0bbdfbd6.js.map": "/pizza-remolo/static/js/main.0bbdfbd6.js.map"
   },
   "entrypoints": [
-    "static/css/main.090fb0ed.css",
-    "static/js/main.3341f080.js"
+    "static/css/main.ab8ebe84.css",
+    "static/js/main.0bbdfbd6.js"
   ]
 }
