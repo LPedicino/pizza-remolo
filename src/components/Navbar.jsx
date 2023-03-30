@@ -3,8 +3,8 @@ import { AiFillTag, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BsFillSaveFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
-import { MdFavorite, MdHelp } from "react-icons/md";
-import logo from "./logo.png";
+import { MdHelp } from "react-icons/md";
+import { BiRestaurant } from "react-icons/bi";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -16,17 +16,13 @@ const Navbar = () => {
         <div onClick={() => setNav(!nav)} className="cursor-pointer">
           <AiOutlineMenu size={30} />
         </div>
-        <h1 className="text-2xl sm:text-3xl lg:-text-4xl px-2">
+        <h1 className="text-2xl sm:text-3xl lg:-text-6xl px-2">
           Pizzeria <span className="font-bold text-[#F23827]">Remolo</span>
         </h1>
       </div>
 
 
-      {/*  Logo  */}
-
-      <div className="hidden md:flex w-[100px] h-[80px] mt-0">
-        <img className="h-[100px] mt-0 " src={logo} alt="logo" />
-      </div>
+  
 
       {/* Cart button */}
 
@@ -72,24 +68,25 @@ const Navbar = () => {
               Orders
             </li>
             <li className="text-xl py-4 flex hover:cursor-pointer">
-              <MdFavorite size={25} className="mr-4" />
-              Favorites
+              <BiRestaurant size={25} className="mr-4" />
+              Menu
             </li>
             <li className="text-xl py-4 flex hover:cursor-pointer">
               <FaWallet size={25} className="mr-4" />
               Wallet
             </li>
             <li className="text-xl py-4 flex hover:cursor-pointer">
-              <MdHelp size={25} className="mr-4" />
+              
+              <AiFillTag size={25} className="mr-4" />
+              Promos
+            </li>
+            <li className="text-xl py-4 flex hover:cursor-pointer">
+            <MdHelp size={25} className="mr-4" />
               Help
             </li>
             <li className="text-xl py-4 flex hover:cursor-pointer">
-              <AiFillTag size={25} className="mr-4" />
-              Promotions
-            </li>
-            <li className="text-xl py-4 flex hover:cursor-pointer">
               <BsFillSaveFill size={25} className="mr-4" />
-              Best Ones
+              About Us
             </li>
             <li className="text-xl py-4 flex hover:cursor-pointer">
               <FaUserFriends size={25} className="mr-4" />

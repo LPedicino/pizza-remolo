@@ -23,7 +23,7 @@ const Hero = () => {
     };
 
     return (
-      <div className='max-w-[1580px] h-[620px] w-full m-auto py-2 px-4 relative group'>
+      <div className='max-w-[1580px] h-[620px] w-full m-auto mt-2 py-2 px-4 relative group'>
           
         <div
           style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
