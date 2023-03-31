@@ -6,23 +6,23 @@ const AboutUS = () => {
     <div name="about" className="w-full h-[100%] lg:h-screen">
       {/* Container */}
 
-      <div className="max-w-[1000px] mx-auto  flex flex-col justify-center h-full items-center text-center gap-4">
-        <h1 className="text-4xl sm:text-6xl font-bold text-black mt-[5rem]">
-          Pizz<span className="font-extrabold text-green-700">eria</span> <span className="font-extrabold text-red-700">Remolo</span>
+      <div className="max-w-[1980px] mx-auto flex flex-col justify-center h-full items-center text-center gap-4">
+        <h1 className="text-3xl sm:text-6xl font-bold text-black mt-[5rem]">
+          <span className="font-extrabold text-green-700">Pizz</span><span className="font-extrabold text-gray-400/50">eria</span> <span className="font-extrabold text-red-700">Remolo</span>
         </h1>
-        <h2 className="text-lg sm:text-2xl my-6 text-red-700 text-center items-center ml-[4%] md:ml-0">
+        <h2 className="w-[480px] sm:w-[720px] lg:w-[1680px] font-style: italic text-lg sm:text-xl my-6 text-red-700 text-center items-center ml-[4%] md:ml-0 px-10">
         In 1896, a family of Italian immigrants arrived in Argentina and brought with them their passion for cooking and their renowned Neapolitan pizza recipe. Over time, their family business grew and thrived, becoming a beloved institution in the local community. Today, we continue this tradition by honoring their legacy and serving up authentic Neapolitan pizza made with love and care.</h2>
-        <div>
+        <div className="max-w-[1980px] items-center m-auto">
           <img
-            className="rounded-xl lg:w-[650px] md:w-[550px] w-[360px] mt-7 ml-0 md:ml-0"
-            src="https://images.unsplash.com/photo-1581886020291-33855d6eaf3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+            className="rounded-xl hidden lg:flex lg:w-[720px] h-[520px] m-auto"
+            src="https://images.unsplash.com/photo-1607207504006-89723ee11236?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
             alt=""
           />
         </div>
-        <div className="hidden md:block w-[1100px] h-[60px] mt-[5rem]  rounded-full">
-          <div className="flex flex-col px-10 py-2 items-center text-center">
+        <div className="hidden md:block w-full h-[55px] mt-[2rem] bg-gradient-to-r from-green-400 via-white to-red-500 ">
+          <div className="flex flex-col px-4 pt-1 items-center text-center">
             <ul className="flex flex-row justify-around w-full h-[50px] ">
-            <p className="pt-3">&copy; 2023 Pizza Remolo Restaurant. All rights reserved</p>
+           
               <li className="w-[25px] h-[25px] rounded-full flex flex-row items-center hover:scale-110 duration-300 mt-2">
                 {" "}
                 <a
@@ -53,7 +53,7 @@ const AboutUS = () => {
                   <FaFacebookSquare className="text-[#3b5998]" size={25} />
                 </a>
               </li>
-            
+              <p className="pt-3">&copy; 2023 Pizza Remolo Restaurant. All rights reserved</p>
             </ul>
           </div>
         </div>

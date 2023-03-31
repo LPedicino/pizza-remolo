@@ -9,7 +9,7 @@ const HeadLineCards = () => {
         <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
           <p className="font-bold text-2xl px-2 pt-4">Delivery all town</p>
           <p className="px-2">from 12:00 at 00:00</p>
-          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white">
+          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white active:scale-95 duration-100 ">
             Order Now
           </button>
         </div>
@@ -22,10 +22,10 @@ const HeadLineCards = () => {
       {/* Card */}
       <div className="rounded-xl relative">
         {/* Overlay */}
-        <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
+        <div className="absolute w-full h-full bg-black/50 rounded-xl text-white ">
           <p className="font-bold text-2xl px-2 pt-4">New Restaurants</p>
           <p className="px-2">Franchises available</p>
-          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white">
+          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white active:scale-95 duration-100">
             Contact US
           </button>
         </div>
@@ -38,10 +38,10 @@ const HeadLineCards = () => {
       {/* Card */}
       <div className="rounded-xl relative">
         {/* Overlay */}
-        <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
+        <div className="absolute w-full h-full bg-black/50 rounded-xl text-white ">
           <p className="font-bold text-2xl px-2 pt-4">We Have Desserts Too</p>
           <p className="px-2">Tasty Treats</p>
-          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white">
+          <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white active:scale-95 duration-100">
             Order Now
           </button>
         </div>
