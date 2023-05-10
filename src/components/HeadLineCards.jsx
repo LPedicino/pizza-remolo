@@ -42,7 +42,7 @@ const HeadLineCards = () => {
           <p className="font-bold text-2xl px-2 pt-4">We Have Desserts Too</p>
           <p className="px-2">Tasty Treats</p>
           <button className="border-white bg-white font-bold text-black mx-2 absolute bottom-4 hover:bg-[#F23827] hover:text-white active:scale-95 duration-100">
-            Order Now
+            View all Products
           </button>
         </div>
         <img

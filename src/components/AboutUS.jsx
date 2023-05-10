@@ -19,7 +19,7 @@ const AboutUS = () => {
             alt=""
           />
         </div>
-        <div className="hidden md:block w-full h-[55px] mt-[2rem] bg-gradient-to-r from-green-400 via-white to-red-500 ">
+        <div className="hidden md:block w-full h-[55px] mt-[2rem] bg-gradient-to-r from-black via-black to-white">
           <div className="flex flex-col px-4 pt-1 items-center text-center">
             <ul className="flex flex-row justify-around w-full h-[50px] ">
            
@@ -30,7 +30,7 @@ const AboutUS = () => {
                   href="https://www.instagram.com/"
                   target="blank_"
                 >
-                  <FaInstagram size={25} />
+                  <FaInstagram size={30} />
                 </a>
               </li>
               <li className="w-[25px] h-[25px] rounded-full flex flex-row items-center hover:scale-110 duration-300 mt-2">
@@ -40,7 +40,7 @@ const AboutUS = () => {
                   href=" https://www.twitter.com"
                   target="blank_"
                 >
-                  <FaTwitter size={25} />
+                  <FaTwitter size={30} />
                 </a>
               </li>
               <li className="w-[25px] h-[25px] rounded-full flex flex-row items-center  hover:scale-110 duration-300 mt-2">
@@ -50,10 +50,11 @@ const AboutUS = () => {
                   href="https://www.facebook.com/"
                   target="blank_"
                 >
-                  <FaFacebookSquare className="text-[#3b5998]" size={25} />
+                  <FaFacebookSquare className="text-[#3b5998]" size={30} />
                 </a>
               </li>
-              <p className="pt-3">&copy; 2023 Pizza Remolo Restaurant. All rights reserved</p>
+              <p className="pt-3 text-white">&copy; 2023 Pizzeria Remolo. <span className="pt-3 text-black">All rights reserved</span></p>
+              
             </ul>
           </div>
         </div>
