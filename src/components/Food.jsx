@@ -5,7 +5,7 @@ function Food() {
   const [filteredFoods, setFilteredFoods] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/empanadas')
+    fetch(`${process.env.REACT_APP_API_URL}/empanadas`)
       .then(res => res.json())
       .then(data => {
         setFoods(data);

@@ -5,7 +5,7 @@ function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:3001/slides')
+    fetch(`${process.env.REACT_APP_API_URL}/slides`)
       .then(res => res.json())
       .then(data => setActiveSlides(data))
       .catch(err => console.error("Error cargando slides de la API:", err));

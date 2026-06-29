@@ -1,25 +1,36 @@
 name: CI Tienda de Empanadas
 
-# El flujo se va a disparar cada vez que hagas un push a la rama main
 on:
   push:
     branches: [ main ]
 
 jobs:
-  build-image:
-    name: Buildear Imagen de Docker
+  build-and-push:
+    name: Buildear y Subir Imagen a Docker Hub
     runs-on: ubuntu-latest
 
     steps:
-    # Paso 1: Descargar el código del repositorio en la máquina virtual
+    # Paso 1: Descargar el código del repositorio
     - name: Checkout del código
       uses: actions/checkout@v4
 
-    # Paso 2: Configurar el entorno de Docker en el servidor de GitHub
+    # Paso 2: Configurar Docker Buildx (entorno de construcción)
     - name: Configurar Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    # Paso 3: Correr el build de prueba para asegurar que la app compila bien
-    - name: Build de la imagen
-      run: |
-        docker build -t tienda-test:latest .
+    # Paso 3: Loguearse en Docker Hub usando los secretos de GitHub
+    - name: Login en Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    # Paso 4: Buildear la imagen del Frontend y subirla a Docker Hub
+    - name: Build y Push de la imagen
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: |
+          ${{ secrets.DOCKERHUB_USERNAME }}/pizza-remolo-frontend:latest
