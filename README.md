@@ -1,21 +1,29 @@
-<h1 align="center">  Pizzeria Remolo </h1>
+# 🍕 Pizza Rémolo - Infraestructura Contenedorizada & Reverse Proxy
 
-<h2 align="center"> Welcome to Pizza Remolo Restaurant<h2>
+Este repositorio contiene la arquitectura de infraestructura local para la aplicación **Pizza Rémolo**, implementando un entorno inmutable, seguro y persistente utilizando Docker y Nginx.
 
-<br>
+## 🏗️ Arquitectura del Sistema
 
-<p align="center">
+La infraestructura se compone de tres servicios principales aislados en una red privada virtual de Docker (`red-tienda`):
 
-<img width="500" alt="pizzeria" src="https://user-images.githubusercontent.com/50922820/198873717-af0f60d4-bb9c-49dd-87b4-59f84bd31639.png">
+* **Frontend (React):** Servido de forma estática en producción optimizada a través de un contenedor Nginx.
+* **Backend API (Node/json-server):** Servicio interno que gestiona el menú y los datos de la aplicación. Su puerto nativo (`3001`) está completamente aislado del exterior por seguridad.
+* **Reverse Proxy (Nginx):** El único punto de entrada público expuesto al host (Puerto `80`). Se encarga de recibir el tráfico y enrutarlo internamente:
+    * Las peticiones a `/api/*` se redirigen al contenedor de la API (removiendo el prefijo).
+    * El resto del tráfico se deriva al Frontend.
 
-</p>
+## 💾 Persistencia de Datos
 
-<h4 align="center"> Hi, I'm Leandro and here is the Pizzeria Web that I made in colaboration with an IDforIdeas Team. <br> Made with React and styled with TailwindCSS.
+Para evitar la volatilidad de los datos al destruir o recrear contenedores, se implementó un **Volumen de Docker** inmutable (`datos-backend`) mapeado directamente al directorio `/data` del backend. Esto asegura que la base de datos `db.json` mantenga su estado ante cualquier ciclo de vida del contenedor (`docker compose down`).
 
-<br>
+## 🚀 Despliegue Local
 
-<span align="center">
+### Requisitos Previos
+* Docker Desktop instalado y corriendo.
 
-##### :point_right: You can see it deployed at [Pizzeria](https://lpedicino.github.io/pizza-remolo)
+### Pasos para inicializar el entorno
 
-</span>
+1. Clonar el repositorio.
+2. Levantar la infraestructura completa forzando la compilación optimizada:
+   ```bash
+   docker compose up -d --build

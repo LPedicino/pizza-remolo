@@ -1,14 +1,28 @@
 services:
+  # 🛡️ El punto de entrada único a nuestra infraestructura
+  proxy:
+    image: nginx:alpine
+    container_name: web-empanadas-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - frontend
+      - backend-api
+    networks:
+      - red-tienda
+    restart: unless-stopped
+
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: web-empanadas-front
-    ports:
-      - "8080:80"
+    # 🔒 Sacamos 'ports' porque ahora entra todo por el proxy
     restart: unless-stopped
     environment:
-      - REACT_APP_API_URL=http://localhost:3001
+      - REACT_APP_API_URL=http://localhost/api
     networks:
       - red-tienda
 
@@ -17,12 +31,17 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: web-empanadas-api
-    ports:
-      - "3001:3001"
+    # 🔒 Sacamos 'ports' por seguridad
     restart: unless-stopped
+    volumes:
+      - datos-backend:/data
     networks:
       - red-tienda
 
 networks:
   red-tienda:
     driver: bridge
+
+volumes:
+  datos-backend:
+    driver: local
