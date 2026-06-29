@@ -1,125 +1,58 @@
-import React, { useState } from "react";
-import { data } from "../data/data.js";
+import React, { useState, useEffect } from 'react';
 
-const Food = () => {
-  const [foods, setFoods] = useState(data);
+function Food() {
+  const [foods, setFoods] = useState([]);
+  const [filteredFoods, setFilteredFoods] = useState([]);
 
-  //   Filters Type burgers/pizza
-
-  const filterType = (category) => {
-    setFoods(
-      data.filter((item) => {
-        return item.category === category;
+  useEffect(() => {
+    fetch('http://localhost:3001/empanadas')
+      .then(res => res.json())
+      .then(data => {
+        setFoods(data);
+        setFilteredFoods(data); // Inicialmente muestra todas
       })
-    );
-  };
+      .catch(err => console.error("Error cargando empanadas de la API:", err));
+  }, []);
 
-  //  Filter by price
-
-  const filterPrice = (price) => {
-    setFoods(
-      data.filter((item) => {
-        return item.price === price;
-      })
-    );
+  // Función para filtrar por categoría (gourmet / clasicas)
+  const filterCategory = (category) => {
+    if (category === 'todas') {
+      setFilteredFoods(foods);
+    } else {
+      setFilteredFoods(foods.filter((item) => item.category === category));
+    }
   };
 
   return (
-    <div className="max-w-[1640px] m-auto px-4 py-12">
-      <h1 className="text-[#F23827] font-bold text-5xl text-center mb-10">
-        Menu
-      </h1>
-      {/* Filted Row */}
-      <div className="flex flex-col lg:flex-row justify-between">
-        {/* filter type */}
+    <div className="max-w-[1640px] mx-auto px-4 py-12">
+      <h1 className="text-orange-600 font-bold text-4xl text-center mb-8">Nuestro Menú</h1>
+      
+      {/* Botones de Filtro */}
+      <div className="flex flex-col lg:flex-row justify-between mb-8">
         <div>
-          <p className="font-bold text-gray-700">Filter by Categorie</p>
-          <div className="flex justify-between flex-wrap">
-            <button
-              onClick={() => setFoods(data)}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              All
-            </button>
-
-            <button
-              onClick={() => filterType("pizza")}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              Pizzas
-            </button>
-            <button
-              onClick={() => filterType("special")}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              Specials
-            </button>
-            <button
-              onClick={() => filterType("desserts")}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              Desserts
-            </button>
-          </div>
-        </div>
-        {/* filter price */}
-        <div>
-          <p className="font-bold text-gray-700">Filter by Price</p>
-          <div className="flex justify-between max-w-[390px] w-full ">
-            <button
-              onClick={() => filterPrice("$")}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              $
-            </button>
-            <button
-              onClick={() => filterPrice("$$")}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              $$
-            </button>
-            <button
-              onClick={() => filterPrice("$$$")}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              $$$
-            </button>
-            <button
-              onClick={() => filterPrice("$$$$")}
-              className="m-1 border-[#F23827] border-[1px] text-[#F23827] hover:bg-[#F23827] hover:text-white"
-            >
-              $$$$
-            </button>
+          <p className="font-bold text-gray-700 mb-2">Filtrar Categoría</p>
+          <div className="flex flex-wrap gap-2">
+            <button onClick={() => filterCategory('todas')} className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white px-4 py-1 rounded-xl border">Todas</button>
+            <button onClick={() => filterCategory('clasicas')} className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white px-4 py-1 rounded-xl border">Clásicas</button>
+            <button onClick={() => filterCategory('gourmet')} className="border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white px-4 py-1 rounded-xl border">Gourmet</button>
           </div>
         </div>
       </div>
 
-      {/* Display Foods */}
-
+      {/* Grilla de Empanadas */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-        {foods.map((item, index) => (
-          <div
-            key={index}
-            className="border shadow-lg rounded-lg hover:scale-105 duration-300 hover:cursor-pointer"
-          >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-full h-[200px] object-cover rounded-t-lg"
-            />
-            <div className="flex justify-between px-2 py-4">
-              <p className="font-bold ">{item.name}</p>
-              <p>
-                <span className="bg-[#F23827] text-white p-1 rounded-full">
-                  {item.price}
-                </span>
-              </p>
+        {filteredFoods.map((item) => (
+          <div key={item.id} className="border shadow-lg rounded-lg hover:scale-105 duration-300 overflow-hidden">
+            <img src={item.image} alt={item.name} className="w-full h-[200px] object-cover" />
+            <div className="flex justify-between px-2 py-4 bg-white">
+              <p className="font-bold">{item.name}</p>
+              <p><span className="bg-orange-500 text-white p-1 rounded-full text-xs font-bold">{item.price}</span></p>
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default Food;

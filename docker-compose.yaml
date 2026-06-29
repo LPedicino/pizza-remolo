@@ -1,11 +1,26 @@
-version: '3.8'
-
 services:
-  tienda:
+  frontend:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: web-empanadas
+    container_name: web-empanadas-front
     ports:
       - "8080:80"
     restart: unless-stopped
+    networks:
+      - red-tienda
+
+  backend-api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: web-empanadas-api
+    ports:
+      - "3001:3001"
+    restart: unless-stopped
+    networks:
+      - red-tienda
+
+networks:
+  red-tienda:
+    driver: bridge

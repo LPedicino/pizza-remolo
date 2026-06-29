@@ -1,0 +1,12 @@
+{
+  "empanadas": [
+    { "id": 1, "name": "Roast Beef & Provoleta", "category": "gourmet", "image": "https://picsum.photos/id/1060/600/400", "price": "$$$$" },
+    { "id": 2, "name": "Jamón Ahumado y Mozzarella", "category": "clasicas", "image": "https://picsum.photos/id/1080/600/400", "price": "$$" },
+    { "id": 3, "name": "Pollo al Verdeo", "category": "clasicas", "image": "https://picsum.photos/id/1060/600/400", "price": "$$" },
+    { "id": 4, "name": "Cebolla Caramelizada y Queso de Cabra", "category": "gourmet", "image": "https://picsum.photos/id/1080/600/400", "price": "$$$" }
+  ],
+  "slides": [
+    { "id": 1, "url": "https://picsum.photos/id/1060/1200/600" },
+    { "id": 2, "url": "https://picsum.photos/id/1080/1200/600" }
+  ]
+}

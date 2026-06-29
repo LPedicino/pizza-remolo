@@ -1,59 +1,47 @@
-import React, { useState } from 'react';
-import { BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
-import { slides } from '../data/data';
+import React, { useState, useEffect } from 'react';
 
-const Hero = () => {
-  
-    const [currentIndex, setCurrentIndex] = useState(0);
+function Hero() {
+  const [activeSlides, setActiveSlides] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-    const prevSlide = () => {
-      const isFirstSlide = currentIndex === 0;
-      const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-      setCurrentIndex(newIndex);
-    };
-  
-    const nextSlide = () => {
-      const isLastSlide = currentIndex === slides.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
-    };
-  
-    const goToSlide = (slideIndex) => {
-      setCurrentIndex(slideIndex);
-    };
+  useEffect(() => {
+    fetch('http://localhost:3001/slides')
+      .then(res => res.json())
+      .then(data => setActiveSlides(data))
+      .catch(err => console.error("Error cargando slides de la API:", err));
+  }, []);
 
-    return (
-      <div className='max-w-[1580px] h-[620px] w-full m-auto mt-2 py-2 px-4 relative group'>
-          
-        <div
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-          className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-        ></div>
-
-        {/* Left Arrow */}
-
-        <div className='hidden group-hover:block active:scale-90 absolute top-[52%] -translate-x-0 translate-y-[-50%] left-7 text-2xl rounded-full p-2 bg-black/50 text-white cursor-pointer duration-300'>
-          <BsArrowLeftShort onClick={prevSlide} size={30} />
-        </div>
-
-        {/* Right Arrow */}
-
-        <div className='hidden group-hover:block active:scale-90 absolute top-[52%] -translate-x-0 translate-y-[-50%] right-7 text-2xl rounded-full p-2 bg-black/50 text-white cursor-pointer duration-300'>
-          <BsArrowRightShort onClick={nextSlide} size={30} />
-        </div>
-
-        <div className='flex top-4 justify-center py-2'>
-          {slides.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-              className='text-2xl cursor-pointer hover:scale-125'
-            >
-            </div>
-          ))}
-        </div>
-      </div>
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === activeSlides.length - 1 ? 0 : prevIndex + 1
     );
+  };
+
+  // Auto-play simple para el carrusel
+  useEffect(() => {
+    if (activeSlides.length === 0) return;
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [activeSlides]);
+
+  if (activeSlides.length === 0) {
+    return <div className="max-w-[1640px] h-[500px] mx-auto p-4 bg-gray-200 animate-pulse rounded-xl"></div>;
   }
 
-export default Hero
+  return (
+    <div className="max-w-[1640px] h-[500px] w-full mx-auto p-4 relative group">
+      <div
+        style={{ backgroundImage: `url(${activeSlides[currentIndex]?.url})` }}
+        className="w-full h-full rounded-2xl bg-center bg-cover duration-500 relative"
+      >
+        {/* Capa oscura decorativa */}
+        <div className="absolute w-full h-full text-gray-200 max-h-[500px] bg-black/40 rounded-2xl flex flex-col justify-center">
+          <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Las Mejores</h1>
+          <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-orange-500">Empanadas</h1>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Hero;
