@@ -6,30 +6,39 @@ on:
 
 jobs:
   build-and-push:
-    name: Buildear y Subir Imagen a Docker Hub
+    name: Buildear y Subir Imagen a GitHub Packages
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps:
-    # Paso 1: Descargar el código del repositorio
     - name: Checkout del código
       uses: actions/checkout@v4
 
-    # Paso 2: Configurar Docker Buildx (entorno de construcción)
     - name: Configurar Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-# Paso 3: Loguearse en Docker Hub usando los secretos de GitHub
-    - name: Login en Docker Hub
+    # Nos logueamos en el registro privado de GitHub usando credenciales automáticas
+    - name: Login to GitHub Container Registry
       uses: docker/login-action@v3
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
-    # Paso 4: Buildear la imagen del Frontend y subirla a Docker Hub
+    # Convertimos el nombre del usuario a minúsculas para evitar errores de Docker
+    - name: Downcase repo owner
+      run: |
+        echo "OWNER_LC=${OWNER,,}" >> $GITHUB_ENV
+      env:
+        OWNER: ${{ github.repository_owner }}
+
+    # Buildeamos y subimos a tu registro privado
     - name: Build y Push de la imagen
       uses: docker/build-push-action@v5
       with:
         context: .
         file: ./Dockerfile
         push: true
-        tags: leapedicino/pizza-remolo-frontend:latest
+        tags: ghcr.io/${{ env.OWNER_LC }}/pizza-remolo-frontend:latest
